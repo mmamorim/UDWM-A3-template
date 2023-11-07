@@ -1,7 +1,9 @@
 <template>
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered class="bg-grey-2">
         <q-list>
-            <q-item-label header>Essential Links</q-item-label>
+            <q-item-label header>
+                Menu
+            </q-item-label>
             <div v-for="(item, index) in menus" :key="index" @click="clickMenu(item)">
                 <q-item class="cursor-pointer">
                     <q-item-section avatar>
@@ -24,7 +26,7 @@ export default {
         return {
             leftDrawerOpen: true,
             menus: [
-                { label: "Atividades", icon: "mdi:home", descr: "uma descrição" },
+                { label: "Tarefas", icon: "mdi:home", descr: "uma descrição" },
                 { label: "Categorias", icon: "mdi:star", descr: "outra descrição" },
             ]
         }

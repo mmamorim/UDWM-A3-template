@@ -3,11 +3,11 @@
     <topo @toggleMenu="toggleLeftDrawer"/>
     <menu_opcoes ref="menuopcoesref" @selectItem="selectItem"/>
     <q-page-container>
-      <div class="p-2" v-if="route == 'Atividades'">
-        Atividades
+      <div class="p-2" v-if="route == 'Tarefas'">
+        <tarefas />
       </div>
       <div class="p-2" v-if="route == 'Categorias'">
-        Categorias
+        <categorias />
       </div>
     </q-page-container>
   </q-layout>
@@ -16,13 +16,15 @@
 <script>
 import topo from "./components/topo.vue"
 import menu_opcoes from "./components/menu.vue"
+import tarefas from "./components/tarefas.vue"
+import categorias from "./components/categorias.vue"
 
 export default {
-  components: { topo, menu_opcoes },
+  components: { topo, menu_opcoes, tarefas, categorias },
   data() {
     return {
       leftDrawerOpen: true,
-      route: 'Atividades'
+      route: 'Tarefas'
     }
   },
   methods: {
